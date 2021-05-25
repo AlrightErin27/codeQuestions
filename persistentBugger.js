@@ -10,3 +10,24 @@
 //                   # 1*2*6=12, and finally 1*2=2
 
 //  persistence(4) # returns 0, because 4 is already a one-digit number
+
+function persistence(num) {
+  let output = [];
+  let digits = num.toString().split("");
+  let multiplicative = 0;
+  //   console.log(digits);
+  //////////////////////////////////////
+
+  //////////////////////////////////////
+  return multiplicative;
+}
+persistence(39);
+
+// if (num <= 0) {
+//     console.log("ERROR ❌");
+//     return "ERROR ❌";
+//   } else if (num.length === 1) {
+//     return 0;
+//   } else {
+//     strNum = num.toString();
+//   }
