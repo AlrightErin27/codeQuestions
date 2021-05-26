@@ -11,23 +11,33 @@
 
 //  persistence(4) # returns 0, because 4 is already a one-digit number
 
-function persistence(num) {
-  let output = [];
-  let digits = num.toString().split("");
-  let multiplicative = 0;
-  //   console.log(digits);
-  //////////////////////////////////////
-
-  //////////////////////////////////////
-  return multiplicative;
-}
-persistence(39);
-
-// if (num <= 0) {
-//     console.log("ERROR ❌");
-//     return "ERROR ❌";
-//   } else if (num.length === 1) {
-//     return 0;
-//   } else {
-//     strNum = num.toString();
+// function persistence(num) {
+//   let digits = num.toString();
+//   //   let realDigits = digits.map(Number);
+//   //   console.log(realDigits);
+//   let i = 0;
+//   ////////////////////////////
+//   while (digits.length >= 2) {
+//     newNum = digits.split("");
+//     newNum.reduce((a, b) => a * b);
+//     i++;
 //   }
+//   return i;
+// }
+
+//Solution I
+function persistence(num) {
+  let i = 0;
+  while (num.toString().length !== 1) {
+    num = num
+      .toString()
+      .split("")
+      .reduce((a, b) => a * b);
+    i++;
+  }
+  return i;
+}
+console.log(persistence(39)); //3
+console.log(persistence(4)); //0
+console.log(persistence(25)); //2
+console.log(persistence(999)); //4
