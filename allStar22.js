@@ -21,7 +21,7 @@
 
 function converter(seconds) {
   if (seconds <= 0) {
-    console.log("bad data");
+    return `Input error!`;
   } else {
     const amountHrs = Math.floor(seconds / 3600);
     const amountMins = Math.floor((seconds % 3600) / 60);
@@ -31,3 +31,4 @@ function converter(seconds) {
 }
 
 console.log(converter(7260));
+console.log(converter(-7260));
