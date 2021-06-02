@@ -15,18 +15,18 @@
 
 //input Arr is an arr of strings. Strings = names
 function whoLikesIt(names) {
-  var templates = [
+  const templates = [
     "no one likes this",
     "{name} likes this",
     "{name} and {name} like this",
     "{name}, {name} and {name} like this",
     "{name}, {name} and {n} others like this",
   ];
-  var idx = Math.min(names.length, 4);
+  const idx = Math.min(names.length, 4);
 
   return templates[idx].replace(/{name}|{n}/g, function (val) {
     return val === "{name}" ? names.shift() : names.length;
   });
 }
 
-console.log(whoLikesIt(["Erin", "Tommy", "Jazzy", "Ronald"]));
+console.log(whoLikesIt(["Mike", "Erin", "Tommy", "Jazzy", "Ronald"]));
