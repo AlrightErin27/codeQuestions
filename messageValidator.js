@@ -30,7 +30,7 @@ const isValid = (maybeMessage) => {
   //return boolean
 };
 
-console.log(isValid("3dog2hi10rovejoline")); //true
+//console.log(isValid("3dog2hi10rovejoline")); //true
 // console.log(isValid("3dog2hi5first")); //true
 // console.log(isValid("")); //true
 // console.log(isValid("8jazz")); //false
