@@ -20,5 +20,11 @@
 //32, 64, 16 === 13824 boxes (24 across, 48 wide & 12 high)
 
 function box_capacity(length, width, height) {
+  const crate = 1.33333333333; //in feet
+  const totalCrates = (length / crate) * (width / crate) * (height / crate);
+  //output to round to whole num
+  const rounded = Math.round(totalCrates);
   //returns num boxes fit
+  return rounded;
 }
+console.log(box_capacity(32, 64, 16));
