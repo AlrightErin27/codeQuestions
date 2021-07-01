@@ -45,14 +45,24 @@
 // 25  =>  true
 // 26  =>  false
 
-function isSquare(num) {
-  let isSquare = false;
-  if (num < 0) {
-    return `${isSquare}:\n ${num} is negative & cannot be square.`;
-  } else if (Math.sqrt(num) % 1 === 0) {
-    isSquare = true;
-    return `${isSquare}:\n ${num} can be squared`;
-  } else {
-    return `${isSquare}:\n ${num} cannot be squared`;
-  }
+// function isSquare(num) {
+//   let isSquare = false;
+//   if (num < 0) {
+//     return `${isSquare}:\n ${num} is negative & cannot be square.`;
+//   } else if (Math.sqrt(num) % 1 === 0) {
+//     isSquare = true;
+//     return `${isSquare}:\n ${num} can be squared`;
+//   } else {
+//     return `${isSquare}:\n ${num} cannot be squared`;
+//   }
+// }
+
+function isThisSquare(n) {
+  return Math.sqrt(n) % 1 === 0;
 }
+console.log(isThisSquare(-1));
+console.log(isThisSquare(0));
+console.log(isThisSquare(3));
+console.log(isThisSquare(4));
+console.log(isThisSquare(25));
+console.log(isThisSquare(26));
