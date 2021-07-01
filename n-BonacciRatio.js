@@ -30,3 +30,4 @@ function nBonacciRatio(n) {
 
   return b / a;
 }
+console.log(nBonacciRatio(1)); //1.618033988749895
