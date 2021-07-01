@@ -31,13 +31,13 @@
 //amount of baskets is infinite
 
 const applesDistribution = (apples, boxCapacity, maxResidue) => {
-  let ways = 1;
+  let applesPerBox = 1;
   for (let i = 2; i <= boxCapacity; i++) {
     if (apples % i <= maxResidue) {
-      ways++;
+      applesPerBox++;
     }
   }
-  return ways;
+  return `${applesPerBox} apples per box`;
 };
 
 console.log(applesDistribution(7, 4, 1)); //3
