@@ -18,7 +18,11 @@
 
 const cycling = (hours) => {
   let approxLiters = hours * 0.5;
-  const liters = Math.round(approxLiters);
+  const liters = Math.floor(approxLiters);
   return liters;
 };
-console.log(cycling(6.7));
+//console.log(cycling(3));
+
+// console.log(Math.round(2.3));
+// console.log(Math.round(2.5));
+// console.log(Math.round(2.7));

@@ -27,10 +27,8 @@ const inverseOrRotate = (str, sz) => {
     //console.log(num);
     let a = [],
       b = [];
-    for (let i = 0; i < num; i++) {
-
-      }
-    }
+    for (let i = 0; i < num; i++) {}
   }
 };
+
 console.log(inverseOrRotate("1, 2, 3, 4", 2));
