@@ -18,7 +18,34 @@
 //fxn input int num--> check if square
 //returns boolean
 
-function checkIfSquare(num) {
+// function checkIfSquare(num) {
+//   let isSquare = false;
+//   if (num < 0) {
+//     return `${isSquare}:\n ${num} is negative & cannot be square.`;
+//   } else if (Math.sqrt(num) % 1 === 0) {
+//     isSquare = true;
+//     return `${isSquare}:\n ${num} can be squared`;
+//   } else {
+//     return `${isSquare}:\n ${num} cannot be squared`;
+//   }
+// }
+
+// console.log(checkIfSquare(-1));
+// console.log(checkIfSquare(0));
+// console.log(checkIfSquare(3));
+// console.log(checkIfSquare(4));
+// console.log(checkIfSquare(25));
+// console.log(checkIfSquare(26));
+
+// Examples
+// -1  =>  false
+//  0  =>  true
+//  3  =>  false
+//  4  =>  true
+// 25  =>  true
+// 26  =>  false
+
+function isSquare(num) {
   let isSquare = false;
   if (num < 0) {
     return `${isSquare}:\n ${num} is negative & cannot be square.`;
@@ -29,18 +56,3 @@ function checkIfSquare(num) {
     return `${isSquare}:\n ${num} cannot be squared`;
   }
 }
-
-console.log(checkIfSquare(-1));
-console.log(checkIfSquare(0));
-console.log(checkIfSquare(3));
-console.log(checkIfSquare(4));
-console.log(checkIfSquare(25));
-console.log(checkIfSquare(26));
-
-// Examples
-// -1  =>  false
-//  0  =>  true
-//  3  =>  false
-//  4  =>  true
-// 25  =>  true
-// 26  =>  false
