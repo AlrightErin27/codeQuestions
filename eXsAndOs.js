@@ -22,4 +22,17 @@ function XO(str) {
   }
   return xNum.length === oNum.length;
 }
-console.log(XO("YourMamaLlamaOxx"));
+//console.log(XO("YourMamaLlamaOxx"));
+function OX(str) {
+  return (
+    str
+      .toLowerCase()
+      .split("")
+      .filter((x) => x === "x").length ===
+    str
+      .toLowerCase()
+      .split("")
+      .filter((x) => x === "o").length
+  );
+}
+//console.log(OX("YourMamaLlamaxx"));
