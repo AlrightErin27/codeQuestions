@@ -19,21 +19,20 @@
 //input = arr ints (the num of ppl). arr has two items: 1st ppl + bus, 2nd ppl - bus
 // return amount ppl still in bus at end route
 
-function busPeople(arrOfArrs) {
-  let peopleIn = 0,
-    peopleOut = 0;
+function busStops(arrOfArrs) {
+  let people = 0;
 
   //loop thru the amount of stops made arrOfArrs[idx]
   for (let i = 0; i < arrOfArrs.length; i++) {
     //add the amount the amount of people who come and go at each stop
-    peopleIn += arrOfArrs[i][0];
-    peopleOut += arrOfArrs[i][1];
+    people += arrOfArrs[i][0];
+    people -= arrOfArrs[i][1];
   }
-  return peopleIn - peopleOut;
+  return people;
 }
 
 console.log(
-  busPeople([
+  busStops([
     [10, 0],
     [3, 5],
     [5, 8],
@@ -41,7 +40,7 @@ console.log(
 ); //5
 
 console.log(
-  busPeople([
+  busStops([
     [3, 0],
     [9, 1],
     [4, 10],
