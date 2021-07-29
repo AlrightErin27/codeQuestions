@@ -17,14 +17,16 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 
 function plantDoubling(n) {
-  if (n <= 0) {
-    return 0;
-  } else if (n % 2 === 0) {
-    return 1;
-  } else {
-    return "test";
+  let count = 1;
+  while (n !== 1) {
+    if (n % 2) {
+      n -= 1;
+      count += 1;
+    } else {
+      n /= 2;
+    }
   }
-  //return min num plants
+  return count;
 }
 
-console.log(plantDoubling(5));
+console.log(plantDoubling(536870911));
