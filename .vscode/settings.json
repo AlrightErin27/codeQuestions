@@ -1,19 +1,20 @@
 {
-    "cSpell.ignoreWords": [
-        "alpa",
-        "arr",
-        "arrs",
-        "asana",
-        "bonacci",
-        "camelize",
-        "code",
-        "dog",
-        "hellocodewars",
-        "hi",
-        "ints",
-        "nums",
-        "pangram",
-        "pell",
-        "rovejoline"
-    ]
+  "cSpell.ignoreWords": [
+    "alpa",
+    "arr",
+    "arrs",
+    "asana",
+    "bonacci",
+    "camelize",
+    "code",
+    "disemvowel",
+    "dog",
+    "hellocodewars",
+    "hi",
+    "ints",
+    "nums",
+    "pangram",
+    "pell",
+    "rovejoline"
+  ]
 }
