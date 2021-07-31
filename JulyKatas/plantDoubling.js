@@ -29,4 +29,4 @@ function plantDoubling(n) {
   return count;
 }
 
-console.log(plantDoubling(536870911));
+//console.log(plantDoubling(536870911));
