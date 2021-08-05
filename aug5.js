@@ -93,3 +93,74 @@ function divisors(n) {
   return divs.length ? divs : n + " is prime";
 }
 //console.log(divisors(600));
+
+////////////////////////////////////////////Anagram Detection////////////////////////////////////////////
+// An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
+// Note: anagrams are case insensitive
+// Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+
+// Examples
+// "foefet" is an anagram of "toffee"
+// "Buckethead" is an anagram of "DeathCubeK"
+
+const anagramDetection = (test, og) => {
+  const t = test.toLowerCase().split("").sort().join(""),
+    o = og.toLowerCase().split("").sort().join("");
+  if (t === o) {
+    return true;
+  }
+  return false;
+};
+//console.log(anagramDetection("Nsh", "Hn"));
+
+////////////////////////////////////////////Name Shuffler////////////////////////////////////////////
+function shuffle(str) {
+  //   let arr = str.split(" ");
+  //   if (arr.length <= 1 || arr.length > 2) {
+  //     return `Invalid Input`;
+  //   }
+  //   return `${arr[1]} ${arr[0]}`;
+  return str.split(" ").reverse().join(" ");
+}
+//console.log(shuffle("Tom Ford"));
+
+////////////////////////////////////////////10 Minute Walk////////////////////////////////////////////
+// You live in the city of Cartesia where all roads are laid out in a perfect grid. You arrived ten minutes too early
+// to an appointment, so you decided to take the opportunity to go for a short walk. The city provides its citizens with a
+// Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings
+// representing directions to walk (eg. ['n', 's', 'w', 'e']). You always walk only a single block for each letter
+// (direction) and you know it takes you one minute to traverse one city block, so create a function that will return
+// true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will,
+// of course, return you to your starting point. Return false otherwise.
+
+// Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e',
+// or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
+
+//you have 10 min, n s w e
+// you always walk one block per letter
+//1 min = 1 block
+
+function walkItOff(walk) {
+  if (walk.length < 10) {
+    return false;
+  }
+  let north = 0,
+    east = 0;
+
+  for (let i = 0; i < walk.length; i++) {
+    if (walk[i] === "n") {
+      north++;
+    } else if (walk[i] === "s") {
+      north--;
+    } else if (walk[i] === "e") {
+      east++;
+    } else {
+      east--;
+    }
+  }
+  if (north === 0 && east === 0) {
+    return true;
+  }
+  return false;
+}
+console.log(walkItOff(["n", "n", "s", "e", "w"]));
