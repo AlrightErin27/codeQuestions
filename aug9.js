@@ -171,3 +171,48 @@ function order(words) {
   return yourOrder.join(" ");
 }
 //console.log(order("is2 Thi1s T4est 3a")); //Th1is is2 3a T4est
+
+/////////////////////////////////////🍌 🍉 🍇 🍓 🫐 Hex Color Converter 🫐 🍓 🍇 🍉 🍌/////////////////////////////////////
+
+// function colorToNumber(x) {
+//   let count = 0;
+//   let arr = x.split("");
+//   if (x.length > 6) {
+//     return `Invalid Input`;
+//   } else if (arr.length < 6) {
+//     let l = 6 - arr.length;
+//     for (let i = 0; i < l; i++) {
+//       arr.push(0);
+//     }
+//   }
+// }
+
+colorToNumber = (y) => +`0x${y}`;
+// console.log(colorToNumber("FFFFFF"));
+
+/////////////////////////////////////🍌 🍉 🍇 🍓 🫐 Elegant Tip 🫐 🍓 🍇 🍉 🍌/////////////////////////////////////
+// Adding tip to a restaurant bill in a graceful way can be tricky, thats why you need make a function for it.
+
+// The function will receive the restaurant bill (always a positive number) as an argument. You need to 1) add at least 15% in tip, 2)
+// round that number up to an elegant value and 3) return it.
+
+// What is an elegant number? It depends on the magnitude of the number to be rounded. Numbers below 10 should simply be rounded to whole
+// numbers. Numbers 10 and above should be rounded like this:
+
+// 10 - 99.99... ---> Round to number divisible by 5
+// 100 - 999.99... ---> Round to number divisible by 50
+// 1000 - 9999.99... ---> Round to number divisible by 500
+// And so on...
+// Good luck!
+// Examples
+//  1  -->    2
+//  7  -->    9
+// 12  -->   15
+// 86  -->  100
+
+function eloTip(bill) {
+  const tip = bill * 1.15;
+  let div = Math.ceil(Math.pow(10, String(Math.floor(tip)).length - 1) / 2);
+  tip % div ? tip - (tip % div) + div : tip;
+}
+//console.log(eloTip(7));
