@@ -34,10 +34,10 @@ function vaporcode(str) {
 // result = 2
 
 function smallest(arr) {
-  let newArr = [];
-  for (x of arr) newArr.push(x.reduce((a, b) => a * b));
-  return newArr.sort((a, b) => a - b)[0];
+  arr = arr.map((x) => x.reduce((a, b) => a * b));
+  return arr.sort((a, b) => a - b)[0];
 }
+
 //console.log(smallest([[1, 5], [2], [-1, -6]]));
 
 /////////////////------------------Alphabet War 7kyu------------------/////////////////

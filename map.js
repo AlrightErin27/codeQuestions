@@ -18,4 +18,5 @@ const timesTwo = numbers.map((number, idx) => {
   return number * 2;
   //if return idx you get the index array [0, 1, 2, 3, 4, 5. 6]
 });
-console.log(timesTwo);
+//console.log(timesTwo);
+//--------------------------------------------------------
