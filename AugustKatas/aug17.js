@@ -34,11 +34,11 @@ function vaporcode(str) {
 // result = 2
 
 function smallest(arr) {
-  arr = arr.map((x) => x.reduce((a, b) => a * b));
-  return arr.sort((a, b) => a - b)[0];
+  return (arr = arr.map((x) => x.reduce((a, b) => a * b)));
+  // return arr.sort((a, b) => a - b)[0];
 }
 
-//console.log(smallest([[1, 5], [2], [-1, -6]]));
+//console.log(smallest([[1, 5], [2], [-1, -6, 5]]));
 
 /////////////////------------------Alphabet War 7kyu------------------/////////////////
 // There are two groups of hostile letters. The tension between left side letters and right side letters was too high
@@ -114,6 +114,7 @@ function war(fight) {
 const wSplitter = (str) => str.split(/[^a-z\d.-]/i);
 
 //console.log(wSplitter("32.0500;-6C:PITCH=-72#ROLL!21.3"));
+//console.log(wSplitter("32.0500;-6C:PITCH=-72#ROLL!21.3"));
 
 /////////////////------------------Beast Feast 8kyu------------------/////////////////
 // All of the animals are having a feast! Each animal is bringing one dish. There is just one rule:
@@ -129,3 +130,10 @@ const feast = (b, d) =>
   b[0] === d[0] && b[b.length - 1] === d[d.length - 1] ? true : false;
 
 //console.log(feast("mole", "magic brownie"));
+// function rev(str) {
+//   str = str.split(" ");
+//   return str.reverse();
+// }
+
+const rev = (s) => s.split(" ").reverse();
+console.log(rev("hahahah yeah"));
