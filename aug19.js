@@ -68,3 +68,43 @@ function battle(x, y) {
   return a < b ? y : a > b ? x : "Tie!";
 }
 //console.log(battle("Hello!", "Bye"));
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~🌵 🌻 🦎 LETTERBOX PAINT SQUAD 7KYU🦎 🌻 🌵~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+// You and a group of friends are earning some extra money in the school holidays by re-painting the numbers on
+// people's letterboxes for a small fee.
+// Since there are 10 of you in the group each person just concentrates on painting one digit! For example, somebody
+// will paint only the 1's, somebody else will paint only the 2's and so on...
+// But at the end of the day you realise not everybody did the same amount of work.
+// To avoid any fights you need to distribute the money fairly. That's where this Kata comes in.
+// Kata Task
+// Given the start and end letterbox numbers, write a method to return the frequency of all 10 digits painted.
+
+//10 friends, 1 friend per digit
+
+function paint(start, end) {
+  let arr = Array(10).fill(0);
+  for (let i = start; i <= end; i++) {
+    [...("" + i)].map((x) => arr[x]++);
+  }
+  return arr;
+}
+//console.log(paint(125, 132));
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~🌵 🌻 🦎 WARN THE SHEEP 8KYU🦎 🌻 🌵~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+function warnSheep(queue) {
+  queue = queue.reverse();
+  let N = 0;
+  if (queue[0] === "wolf") return `Pls go away and stop eating my sheep`;
+  for (q of queue) {
+    if (q === "sheep") {
+      N++;
+    } else {
+      break;
+    }
+  }
+  return `Oi! Sheep number ${N}! You are about to be eaten by a wolf!`;
+}
+// console.log(
+//   warnSheep(["sheep", "sheep", "wolf", "sheep", "sheep", "sheep", "wolf"])
+// ); //warn sheep num 3
