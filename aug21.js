@@ -40,11 +40,42 @@ function select(arr1, arr2) {
 
 //arrS sorted to reverse alpha order-> extract 3rd el -> third letter from el
 //if letter === 1st letter of 1  or 1+ from arrT return 1st el that starts with letter
-console.log(
-  select(
-    ["banana", "rose", "orange", "apple"],
-    ["carrot", "nectarines", "cucumber", "nocturnal"]
-  )
-);
+// console.log(
+//   select(
+//     ["banana", "rose", "orange", "apple"],
+//     ["carrot", "nectarines", "cucumber", "nocturnal"]
+//   )
+// );
 
-//🧿🧿🧿~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Map Operator~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~🧿🧿🧿//
+//🧿🧿🧿~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Adding Arrs 7kyu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~🧿🧿🧿//
+// Create a function that takes an array of letters, and combines them into words in a sentence.
+// The function should combine all the 0th indexed letters to create the word 'just', all the 1st indexed
+//  letters to create the word 'live', etc.
+// Shorter words will have an empty string in the place once the word has already been mapped out
+// (see the last element in the last element in the array).
+// arrAdder([
+// ["J", "L", "L", "M"],
+//   ["u", "i", "i", "a"],
+//   ["s", "v", "f", "n"],
+//   ["t", "e", "e", ""];
+//     ]) // => "Just Live Life Man"
+
+function arrAdd(arr) {
+  let result = "";
+  for (let i = 0; i < arr[0].length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      result += arr[j][i];
+    }
+    result += " ";
+  }
+  return result.trim();
+}
+
+// console.log(
+//   arrAdd([
+//     ["J", "L", "L", "M"],
+//     ["u", "i", "i", "a"],
+//     ["s", "v", "f", "n"],
+//     ["t", "e", "e", ""],
+//   ])
+// );
