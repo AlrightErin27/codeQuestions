@@ -58,4 +58,4 @@ function digital_root(n) {
   }
   return Number(count);
 }
-console.log(digital_root(1));
+//console.log(digital_root(1));
