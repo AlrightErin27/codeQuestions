@@ -1,16 +1,35 @@
-//---------🙈 🙉 🙊--------Playing w/Digits--------🙈 🙉 🙊-------------//
-// Some numbers have funny properties. For example:
-// 89 --> 8¹ + 9² = 89 * 1
-// 695 --> 6² + 9³ + 5⁴= 1390 = 695 * 2
-// 46288 --> 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
-// Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p
-// we want to find a positive integer k, if it exists, such as the sum of the digits of n taken to the
-// successive powers of p is equal to k * n.
-// In other words:
-// Is there an integer k such as : (a ^ p + b ^ (p+1) + c ^(p+2) + d ^ (p+3) + ...) = n * k
-// If it is the case we will return k, if not return -1.
-// Note: n and p will always be given as strictly positive integers.
-// digPow(89, 1) should return 1 since 8¹ + 9² = 89 = 89 * 1
-// digPow(92, 1) should return -1 since there is no k such as 9¹ + 2² equals 92 * k
-// digPow(695, 2) should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2
-// digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
+//---------🙈 🙉 🙊--------Tortoise Racing--------🙈 🙉 🙊-------------//
+// Two tortoises named A and B must run a race. A starts with an average speed of 720 feet per hour.
+// Young B knows she runs faster than A, and furthermore has not finished her cabbage.
+// When she starts, at last, she can see that A has a 70 feet lead but B's speed is 850 feet per hour.
+// How long will it take B to catch A?
+// More generally: given two speeds v1 (A's speed, integer > 0) and v2 (B's speed, integer > 0)
+// and a lead g (integer > 0) how long will it take B to catch A?
+// The result will be an array [hour, min, sec] which is the time needed in hours, minutes and seconds
+// (round down to the nearest second) or a string in some languages.
+// If v1 >= v2 then return nil, nothing, null, None or {-1, -1, -1} for C++, C, Go, Nim, Pascal,
+// [-1, -1, -1] for Perl,[] for Kotlin or "-1 -1 -1".
+
+//A goes 720 feet / 1 hr
+//B goes 850 feet / 1 hr
+//A has a 70 feet lead
+
+// function race(slowT, fastT, lead) {
+//   //how long for b to run lead
+//   let bTimeMins = fastT / (60 * lead);
+//   //how far A has gone during that
+//   let aDiffFt = 60 / (slowT * bTimeMins);
+//   return aDiffFt;
+//   //return [hour, min, sec] of how long it will take for B to reach A
+// }
+
+const race = (slowT, fastT, lead) => {
+  if (fastT < slowT) return null;
+  let secs = Math.floor((lead / (fastT - slowT)) * 3600);
+  let h = Math.floor(secs / 3600);
+  let m = Math.floor((secs - h * 3600) / 60);
+  let s = secs - h * 3600 - m * 60;
+  return [h, m, s];
+};
+
+console.log(race(720, 850, 70));
