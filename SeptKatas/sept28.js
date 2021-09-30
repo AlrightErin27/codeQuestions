@@ -32,4 +32,4 @@ const race = (slowT, fastT, lead) => {
   return [h, m, s];
 };
 
-console.log(race(720, 850, 70));
+//console.log(race(720, 850, 70));
